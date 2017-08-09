@@ -1,0 +1,23 @@
+
+1. python 描述符协议
+2. python 上下文管理器协议
+3. python 迭代器协议
+
+6. python
+    __new__、__init__、__call__、
+    __get__、__set__、__delete__、
+    __getattr__、__setattr__、__delattr__、__getattribute__、
+    __getitem__、
+    __iter__、__next__、
+    _enter__、 __exit__、
+    __repr__、__str__、
+    __getitem__
+    __slots__、__metaclass__、
+    __missing__、__reduce__、
+    __add__、__sub__、__or__、__and__、
+    __reversed__、
+
+    等一系列方法熟悉
+
+    相关文档
+    http://www.phperz.com/article/14/1002/26705.html
