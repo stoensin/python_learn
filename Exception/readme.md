@@ -48,6 +48,11 @@ class SomeCustomException(Exception):
    1. 断言（assert）
    - 其中assert是断言的关键字。执行该语句的时候，先判断表达式expression，如果表达式为真，则什么都不做；如果表达式不为真，则抛出异常。reason跟我们之前谈到的异常类的实例一样。
 ```
+assert的一般格式为：assert test [,msg]
+test是一个表达式，其值为True或False。如果test的求值是False，assert就会引发AssertionError异常并使用在assert中提供的可选消息msg。
+note：assert语句用于检查的内容应该始终为真，如果assert语句引发异常，这就意味着程序有Bug，而不是用户数据出错。
+```
+```
 >>> assert len('love') == len('like')  
 >>> assert 1==1  
 >>> assert 1==2,"1 is not equal 2!"  
@@ -65,7 +70,12 @@ AssertionError:1 is not equal 2!
 >>> type(reason)
 <type 'exceptions.AssertionError'>
 ```
+   
    2. 上下文管理（with语句）
+```
+with可以用来简化 try...except...finally 代码，看起来可以比try...except...finally更清晰。
+只要重载了__enter__() 和 __exit__(exc_type, exc_val, exc_tb) 方法，那么就可以用with 关键字调用。
+```
    - 如果你使用try,except,finally代码仅仅是为了保证共享资源（如文件，数据）的唯一分配，并在任务结束后释放它，那么你就有福了！这个with语句可以让你从try,except,finally中解放出来！
    - 只有支持上下文管理协议（context management protocol）的对象 就可以使用with语句。
 

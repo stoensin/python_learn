@@ -33,10 +33,17 @@
 16. 加密 Encryption（base64 md5 aes des crc32）
 
 # 参考文档 #
+- [Python 中文学习大本营](http://www.pythondoc.com/)
 - [Python tutorial 2.7.13](http://www.pythondoc.com/pythontutorial27/index.html) 
 - [python 2](http://www.runoob.com/python/python-tutorial.html)
 - [python3-cookbook](http://python3-cookbook.readthedocs.io/zh_CN/latest/index.html)
 - [python 3](http://www.runoob.com/python3/python3-tutorial.html)
+- [Python标准库](http://python.usyiyi.cn/translate/python_278/library/index.html)
+
+- [3.6.2 Documentation](https://docs.python.org/3.6/library/index.html)
+- [Python 入门指南](http://www.pythondoc.com/pythontutorial3/)
+- [Python 3 文档(简体中文) 3.2.2 documentation](http://docspy3zh.readthedocs.io/en/latest/tutorial/)
+- [Python 3.6 新特性官方文档中文版](https://juejin.im/entry/5860db8a1b69e6005625eb91)
 
 - [中文文档](http://python.usyiyi.cn/)
 - [python之旅](https://www.ctolib.com/docs/sfile/explore-python/index.html)
