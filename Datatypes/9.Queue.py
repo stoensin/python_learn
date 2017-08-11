@@ -27,7 +27,7 @@ def init_signal(handler_exit):
 init_signal(signal_handle)
 
 ############################################################
-class Consumer(threading.Thread):
+class ConsumerThread(threading.Thread):
     '消费者'
 
     def __init__(self, queue):
@@ -35,7 +35,7 @@ class Consumer(threading.Thread):
         self.queue=queue
 
     def run(self):
-        print 'I am Consumer Class'
+        print 'I am Consumer Thread'
         while True:
             counter=self.queue.get()
             print 'Going to Sleep ( %d ) ' % counter
@@ -46,7 +46,7 @@ class Consumer(threading.Thread):
 
 
 ############################################################
-def Producer(queue):
+def producerLoop(queue):
     '生产者'
     _next = itertools.cycle(xrange(100))
     while 1:
@@ -58,17 +58,17 @@ def Producer(queue):
 
 ############################################################
 def main():
-    global glb_threads
+    _threads = []
     queue = Queue.Queue(50)
-    glb_threads = []
     for i in range(10):
-        glb_threads.append(Consumer(queue))
+        _threads.append(ConsumerThread(queue))
 
-    for worker in glb_threads:
+    for worker in _threads:
         print 'Going to Thread!'
         worker.daemon=True
         worker.start()
-    Producer(queue)
+
+    producerLoop(queue)
     return
 
 if __name__ == "__main__":
