@@ -24,64 +24,73 @@ sem = BoundedSemaphore(1) #设定对共享资源的访问数量
 glb_dict = {}
 signal_stop=False
 
+############################################################
+import functools
+# gevent加锁 # 设定对共享资源的访问数量
+def sync_gevent_lock(sem):
+    def handle_lock(func):
+        @functools.wraps(func)
+        def wrapper(*args, **kwargs):
+            with sem:
+                return func(*args, **kwargs)
+        return wrapper
+    return handle_lock
 
 ############################################################
-def do_worker1():
-    with sem:
-        for key in glb_dict:
-            log.info('do_worker1 ----(%s: %i)---- semaphore' % (key, glb_dict[key]))
-            gevent.sleep(2)
+@sync_gevent_lock(sem)
+def do_worker_spawn():
+    for key in glb_dict:
+        log.info('do_worker_spawn start ----(%s: %i)---- semaphore' % (key, glb_dict[key]))
+        gevent.sleep(1)
+        log.info('do_worker_spawn finish ----(%s: %i)---- semaphore' % (key, glb_dict[key]))
     return
 
-def worker1():
+def worker_spawn():
     while 1:
         if signal_stop: break
-        do_worker1()
-        gevent.sleep(5)
+        do_worker_spawn()
+        gevent.sleep(2)
     return
 
 ############################################################
-def do_worker_product(n):
-    with sem:
-        key = random.choice(['a', 'b', 'c'])
-        log.info('do_worker2 -----(%i----%s)---- semaphore' % (n, key))
-        if key in glb_dict:
-            glb_dict[key] += 1
-        else:
-            glb_dict.update({
-                key: 1
-            })
+@sync_gevent_lock(sem)
+def do_worker_pool(n):
+    key = random.choice(['a', 'b', 'c'])
+    log.info('do_worker_pool start -----(%i----%s)---- semaphore' % (n, key))
+    if key in glb_dict:
+        glb_dict[key] += 1
+    else:
+        glb_dict.update({
+            key: 1
+        })
+    gevent.sleep(random.randint(1, 100)*random.choice([0.01, 0.001]))
+    log.info('do_worker_pool finish -----(%i----%s)---- semaphore' % (n, key))
     return
 
-def do_worker2(n):
-    gevent.sleep(random.randint(1, 100)*random.choice([0.1, 0.01, 0.001]))
-    log.info('do_worker2 %i' % n)
-    do_worker_product(n)
-    return
-
-def worker2():
-    pool = gevent.pool.Pool(5)
+def worker_pool():
+    pool = gevent.pool.Pool(20)
     count=1
     while 1:
         if signal_stop: break
-        pool.spawn(do_worker2, count)
+        pool.spawn(do_worker_pool, count)
         count += 1
     pool.join()
     return
 
+############################################################
 def main():
-    gevent.spawn(worker1)
-    worker2()
+    gevent.spawn(worker_spawn)
+    worker_pool()
     return
 
 ############################################################
 def init():
-    log.info( '--------init---------' )
+    log.info( '--------init start---------' )
     return
 
 def finish():
-    log.info('--------finish---------')
-    do_worker1()
+    log.info('--------finish start---------')
+    do_worker_spawn()
     return
 
 ############################################################
