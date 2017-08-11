@@ -93,10 +93,20 @@ def sift_down(arr, start, end):
             break
 
 
+# 堆排序
+def heapq_sort5(arr):
+    T = []
+    # for v in arr:
+    #     heapq.heappush(T, v)
+    # [ heapq.heappush(T, v) for v in arr ]
+    map(lambda v: heapq.heappush(T, v), arr)
+    return [heapq.heappop(T) for _ in xrange(len(T))]
+
+
 if __name__ == "__main__":
     list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5]
-    list1=heap_sort(list1)
-    print list1
+    lst=heap_sort(list1)
+    print lst
 
     list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5]
     lst = heap_sort3(list1)
@@ -104,7 +114,11 @@ if __name__ == "__main__":
 
     list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5]
     lst = heap_sort4(list1)
-    print list1
+    print lst
+
+    list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5, 1000, 200]
+    lst5 = heapq_sort5(list1)
+    print lst5
 
 
 
