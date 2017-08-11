@@ -23,13 +23,6 @@
 
 import heapq
 
-# 利用 heap 排序
-def heap_sort(arr):
-    length = len(arr)
-    heapq.heapify(arr)
-    T = heapq.nsmallest(length, arr)
-    return T
-
 ############################################################
 def heap_sort3(lst):
     n = len(lst)-1              # 这里注意根据python的range列表的性质，要将序列长度减一，否则列表长度溢出
@@ -55,6 +48,8 @@ def heap_adjust(lst, k, size):      # 自顶向下堆化，从k开始堆化
         else:
             break
 
+
+##############################################
 """
 堆排序（Heapsort）是指利用堆这种数据结构所设计的一种排序算法。
 堆是一个近似完全二叉树的结构，并同时满足堆积的性质：即子结点的键值或索引总是小于（或者大于）它的父节点。
@@ -92,33 +87,45 @@ def sift_down(arr, start, end):
         else:
             break
 
+##############################################
+# 利用 heap 排序
+def heap_sort(arr):
+    heapq.heapify(arr)
+    T = heapq.nsmallest(len(arr), arr)
+    return T
 
+
+##############################################
 # 堆排序
 def heapq_sort5(arr):
     T = []
-    # for v in arr:
-    #     heapq.heappush(T, v)
-    # [ heapq.heappush(T, v) for v in arr ]
     map(lambda v: heapq.heappush(T, v), arr)
     return [heapq.heappop(T) for _ in xrange(len(T))]
 
 
-if __name__ == "__main__":
-    list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5]
+##############################################
+def main1():
+    list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5, 1000, 200]
     lst=heap_sort(list1)
-    print lst
+    # print lst
 
-    list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5]
-    lst = heap_sort3(list1)
-    print lst
-
-    list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5]
-    lst = heap_sort4(list1)
-    print lst
-
+def main2():
     list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5, 1000, 200]
     lst5 = heapq_sort5(list1)
-    print lst5
+    # print lst5
+
+def main3():
+    list1 = [0, 9, 1, 3, 2, 5, 4, 12, 2, 3, 5, 1000, 200]
+    lst = heap_sort4(list1)
+    # print lst
+
+if __name__ == "__main__":
+    import timeit
+    print timeit.timeit("main1()", setup="from __main__ import main1", number=10000)
+
+    print timeit.timeit("main2()", setup="from __main__ import main2", number=10000)
+
+    print timeit.timeit("main3()", setup="from __main__ import main3", number=10000)
 
 
 
