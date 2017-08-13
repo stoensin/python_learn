@@ -19,7 +19,8 @@
     __len__、__contains__、
     __eq__、__ne__、__hash__、
     __prepare__、
-
+    __deepcopy__、 __copy__、
+    __weakref__、
     等一系列方法熟悉
 
     相关文档
