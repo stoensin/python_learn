@@ -33,6 +33,9 @@
 16. 加密 Encryption（base64 md5 aes des crc32）
 
 # 参考文档 #
+
+- [Python - oucb总结 ](http://oucb.org/)
+- [Python - oucb总结 ](http://oucb.org/329.html)
 - [中文文档](http://python.usyiyi.cn/)
 
 - [Python 中文学习大本营](http://www.pythondoc.com/)
