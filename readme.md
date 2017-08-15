@@ -34,16 +34,19 @@
 
 # 参考文档 #
 
+- [Python](https://github.com/justjavac/free-programming-books-zh_CN#python)
+###  
+- [Python tutorial 2.7.13](http://www.pythondoc.com/pythontutorial27/index.html) 
+- [中文文档](http://python.usyiyi.cn/)
 - [Python - oucb总结 ](http://oucb.org/)
 - [Python - oucb总结 ](http://oucb.org/329.html)
-- [中文文档](http://python.usyiyi.cn/)
-
 - [Python 中文学习大本营](http://www.pythondoc.com/)
-- [Python tutorial 2.7.13](http://www.pythondoc.com/pythontutorial27/index.html) 
 - [python 2](http://www.runoob.com/python/python-tutorial.html)
+- [Python标准库 2.7.8](http://python.usyiyi.cn/translate/python_278/library/index.html)
+
+###  
 - [python3-cookbook](http://python3-cookbook.readthedocs.io/zh_CN/latest/index.html)
 - [python 3](http://www.runoob.com/python3/python3-tutorial.html)
-- [Python标准库 2.7.8](http://python.usyiyi.cn/translate/python_278/library/index.html)
 
 - [Python 3.5.2 文档](http://python.usyiyi.cn/translate/python_352/index.html)
 - [Python标准库 3.5.2](http://python.usyiyi.cn/translate/python_352/library/index.html)
