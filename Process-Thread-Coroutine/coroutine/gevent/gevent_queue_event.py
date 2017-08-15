@@ -12,7 +12,7 @@ import json
 import random
 import redis
 
-from lib import limit, queue
+from lib import queue
 
 import logging
 import logging.handlers
