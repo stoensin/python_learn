@@ -24,5 +24,7 @@
     __subclasshook__、__weakref__
     等一系列方法熟悉
 
+7. 静态方法、类方法、抽象方法、super、
+
     相关文档
     http://www.phperz.com/article/14/1002/26705.html
