@@ -104,8 +104,61 @@ def multipliers():
     return [lambda x, a=i: a * x for i in range(4)]
 
 print [m(2) for m in multipliers()]
-
+# [0, 2, 4, 6]
 # Python的延迟绑定其实就是只有当运行嵌套函数的时候，才会引用外部变量i，不运行的时候，并不是会去找i的值，这个就是第一个函数，为什么输出的结果是[6,6,6,6]的原因。
 
+import functools
+def multipliers():
+    return [functools.partial(lambda a, x: x * a, i) for i in range(4)]
 
+print [m(2) for m in multipliers()]
+# [0, 2, 4, 6]
 
+#######################################################################
+# 1. 误区2
+### 禁止在闭包函数内对引用的自由变量进行重新绑定
+
+# def foo(func):
+#     free_value = 8
+#     def _wrapper(*args, **kwargs):
+#         old_free_value = free_value #保存旧的free_value
+#         free_value = old_free_value * 2 #模拟产生新的free_value
+#         func(*args, **kwargs)
+#         free_value = old_free_value
+#     return _wrapper
+
+def foo(func):
+    free_value = [8]
+    def _wrapper(*args, **kwargs):
+        old_free_value = free_value[0] #保存旧的free_value
+        free_value[0] = old_free_value * 2 # 模拟产生新的free_value
+        func(*args, **kwargs)
+        return free_value[0]
+    return _wrapper
+
+def hello():
+    print 'hello world'
+
+hello = foo(hello)
+i = hello()
+print i
+# 16
+i = hello()
+print i
+# 32
+
+def foo():
+    free_value = [8]
+    def _wrapper(*args, **kwargs):
+        T = free_value[0]     # 保存旧的free_value
+        free_value[0] = T * 2 # 模拟产生新的free_value
+        return free_value[0]
+    return _wrapper
+
+f = foo()
+print f()
+print f()
+print f()
+# 16
+# 32
+# 64
