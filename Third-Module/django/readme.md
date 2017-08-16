@@ -7,3 +7,8 @@
 
 ###   
 - [Pagination](https://docs.djangoproject.com/en/1.10/topics/pagination/)
+
+
+###   
+- [Django自定义User模型](https://foofish.net/django-custom-user.html)
+- [Django Signals 从实践到源码分析](https://foofish.net/django-signals.html)
