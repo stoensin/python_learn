@@ -43,6 +43,7 @@
 - [Python 中文学习大本营](http://www.pythondoc.com/)
 - [python 2](http://www.runoob.com/python/python-tutorial.html)
 - [Python标准库 2.7.8](http://python.usyiyi.cn/translate/python_278/library/index.html)
+- [Python“不为人知的”特性](https://foofish.net/python-tricks-tips.html)
 
 ###  
 - [python3-cookbook](http://python3-cookbook.readthedocs.io/zh_CN/latest/index.html)
