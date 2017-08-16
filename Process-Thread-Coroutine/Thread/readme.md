@@ -13,6 +13,7 @@
 ```
 
 ## 文档
+- [ThreadLocal](https://www.ctolib.com/docs/sfile/explore-python/Process-Thread-Coroutine/threadlocal.html)
 - [Python线程指南](http://www.cnblogs.com/huxi/archive/2010/06/26/1765808.html)
 - [Python模块学习：threading 多线程控制和处理](http://python.jobbole.com/81546/)
 - [Python：使用threading模块实现多线程（转）](http://www.cszhi.com/20130528/python-threading.html)
