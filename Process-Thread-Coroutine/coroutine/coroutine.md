@@ -29,3 +29,10 @@ c = consumer()
 produce(c)
 ```
 > 每次生产一次,中断生产函数,运行消费者函数,之后再生产,如此下去.
+
+
+# 文档
+- [协程](https://www.ctolib.com/docs/sfile/explore-python/Process-Thread-Coroutine/coroutine.html)
+- [Python黑魔法 --- 异步IO（ asyncio） 协程](http://python.jobbole.com/87310/)
+- [Python协程](https://thief.one/2017/02/20/Python%E5%8D%8F%E7%A8%8B/)
+- [Python多线程鸡年不鸡肋](https://thief.one/2017/02/17/Python%E5%A4%9A%E7%BA%BF%E7%A8%8B%E9%B8%A1%E5%B9%B4%E4%B8%8D%E9%B8%A1%E8%82%8B/)
