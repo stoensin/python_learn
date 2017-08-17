@@ -34,8 +34,8 @@
 
 # 参考文档 #
 
-- [Python](https://github.com/justjavac/free-programming-books-zh_CN#python)
 ###  文档
+- [Python](https://github.com/justjavac/free-programming-books-zh_CN#python)
 - [Python tutorial 2.7.13](http://www.pythondoc.com/pythontutorial27/index.html) 
 - [中文文档](http://python.usyiyi.cn/)
 - [Python - oucb总结 ](http://oucb.org/)
@@ -43,6 +43,7 @@
 - [Python 中文学习大本营](http://www.pythondoc.com/)
 - [python 2](http://www.runoob.com/python/python-tutorial.html)
 - [Python“不为人知的”特性](https://foofish.net/python-tricks-tips.html)
+- [Python 2 和 Python 3 主要区别有哪些（一）？](https://foofish.net/python2_python3.html)
 
 ###  标准库
 - [Python标准库 2.7.8](http://python.usyiyi.cn/translate/python_278/library/index.html)
