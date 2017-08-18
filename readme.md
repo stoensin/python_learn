@@ -10,27 +10,25 @@
 
 5. 类       Class
 
-6. 高级特性 Advanced-Features
+6. 文件操作 File-Directory
 
-7. 文件操作 File-Directory
+7. 进程、线程、协程 Process-Thread-Coroutine
 
-8. 进程、线程、协程 Process-Thread-Coroutine
+8. 异常 Exception
 
-9. 异常 Exception
+9. 正则 Regular-Expression
 
-10. 正则 Regular-Expression
+10. 网络编程socket、HTTP服务 Socket-Http
 
-11. 网络编程socket、HTTP服务 Socket-Http
+11. 标准模块   Standard-Modules
 
-12. 标准模块   Standard-Modules
+12. 第三方模块 Third-Module  (rebitmq、celery、flask、django、supervisor、click、)
 
-13. 第三方模块 Third-Module  (rebitmq、celery、flask、django、supervisor、click、)
+13. 数据库操作   Database （mysql、 pgsql、 redis、 mongodb、memcache)
 
-14. 机器学习、数据挖掘  Machine
+14. 加密 Encryption（base64 md5 aes des crc32）
 
-15. 数据库操作   Database （mysql、 pgsql、 redis、 mongodb、memcache)
-
-16. 加密 Encryption（base64 md5 aes des crc32）
+15. 机器学习、数据挖掘  Machine
 
 # 参考文档 #
 
