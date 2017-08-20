@@ -35,6 +35,7 @@
 # 参考文档 #
 
 ###  文档
+- [Python 资源大全中文版](https://github.com/jobbole/awesome-python-cn)
 - [Python](https://github.com/justjavac/free-programming-books-zh_CN#python)
 - [Python tutorial 2.7.13](http://www.pythondoc.com/pythontutorial27/index.html) 
 - [中文文档](http://python.usyiyi.cn/)
