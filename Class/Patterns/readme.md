@@ -17,7 +17,7 @@
 >> 1、Simple Factory模式
 >> 专门定义一个类来负责创建其它类的实例，被创建的实例通常都具有共同的父类。
 
->> 2、Factory Method模式
+>> 2、Factory Method工厂模式
 >> 将对象的创建交由父类中定义的一个标准方法来完成，而不是其构造函数，究竟应该创建何种对象由具体的子类负责决定
 
 >> 3、Abstract Factory模式
@@ -31,3 +31,16 @@
 
 >> 6、Prototype模式
 >> 利用一个能对自身进行复制的类，使得对象的动态创建变得更加容易。
+
+
+## 文档
+- [Python 设计模式: 工厂模式(factory pattern)](https://mozillazg.github.io/2016/08/python-factory-pattern.html)
+- [Python 设计模式: 建造者模式(builder pattern)](https://mozillazg.github.io/2016/08/python-builder-pattern.html)
+- []()
+- []()
+- []()
+
+####  
+- [用python实现设计模式](http://python-web-guide.readthedocs.io/zh/latest/design/design.html)
+- [python实践设计模式](http://www.uml.org.cn/sjms/201305283.asp)
+- [Python设计模式1-创建型模式](http://www.jianshu.com/p/2450b785c329)
