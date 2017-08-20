@@ -30,6 +30,8 @@
 
 15. 机器学习、数据挖掘  Machine
 
+16. Pythonic  python风格
+
 # 参考文档 #
 
 ###  文档
