@@ -1,7 +1,7 @@
 #-*- coding: utf8 -*-
 
 import sys
-from lib import SimpleDBTool, DBTool
+from lib import SimpleDBTool, DBTool, DBFactory
 
 
 def do_query(dbtype, sql):
@@ -52,6 +52,24 @@ if __name__ == "__main__":
     print res
     # None
 
+    #############################################
+    mysql_edm_web_obj = DBFactory.getDBObject('mysql', 'edm_web')
+    sql = 'SELECT username FROM core_customer Limit 1;'
+    res = mysql_edm_web_obj.query(sql)
+    print res
+
+
+    pgsql_edm_web_obj = DBFactory.getDBObject('postgresql', 'mail_relay')
+    sql = 'SELECT username FROM auth_user Limit 1;'
+    res = pgsql_edm_web_obj.query(sql)
+    print res
+    # [('test22',)]
+
+    mongo_obj = DBFactory.getDBObject('mongo', 'mongo')
+    mongo = mongo_obj.get_mongo_collection('mail')
+    res = mongo.find_one({"addr": '1@qq.com'})
+    print res
+    # None
 
 
 

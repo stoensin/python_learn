@@ -28,7 +28,17 @@ DATABASES = {
             'password': '123456',
             'dbname': 'mail_relay',
         },
+    },
+
+    # Mongo 配置
+    'mongo': {
+        'host': '127.0.0.1',
+        'port': 27017,
+        'user': 'sa',
+        'pass': 'sa',
+        'dbname': 'admin',
     }
+
 }
 
 # redis 配置

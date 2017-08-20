@@ -159,7 +159,7 @@ class DBToolKit(object):
     def maintain_mongoPool(self, trycount=5) :
         self.error('maintain mongodb exception')
         i = 0
-        while self.initMongoDB(outerr=False) == False:
+        while self.init_mongo(outerr=False) == False:
             i += 1
             self.error('try connect mongodb : %d' % i)
             if i == trycount :
